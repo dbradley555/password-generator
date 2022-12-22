@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="selection-card">
+          <form action="/action_page.php">
+            <div class="slidecontainer">
+              <input
+                type="range"
+                min="8"
+                max="128"
+                value="12"
+                class="slider"
+                id="myRange"
+              />
+              <p>Password Length: <span id="length"></span></p>
+            </div>
+            <input
+              type="checkbox"
+              id="lowercase"
+              name="lowercase"
+              value="Lowercase Letters"
+            />
+            <label for="vehicle1"> Lowercase Letters</label><br />
+            <input
+              type="checkbox"
+              id="uppercase"
+              name="uppercase"
+              value="Uppercase Letters"
+            />
+            <label for="vehicle2"> Uppercase Letters</label><br />
+            <input type="checkbox" id="digits" name="digits" value="Digits" />
+            <label for="vehicle3"> Digits</label><br />
+            <input
+              type="checkbox"
+              id="special"
+              name="special"
+              value="Special Characters"
+            />
+            <label for="vehicle3"> Special Characters</label>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Select Criteria</button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
